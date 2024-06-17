@@ -1,0 +1,137 @@
+SplineFontDB: 3.2
+FontName: CharmBypass-Bold
+FullName: CharmBypass Bold
+FamilyName: CharmBypass
+Weight: Bold
+Copyright: Michael Orlitzky
+Version: 1.0
+ItalicAngle: 0
+UnderlinePosition: -115
+UnderlineWidth: 45
+Ascent: 783
+Descent: 217
+InvalidEm: 0
+LayerCount: 2
+Layer: 0 0 "Back" 1
+Layer: 1 0 "Fore" 0
+XUID: [1021 610 -207347425 11146714]
+StyleMap: 0x0020
+FSType: 4
+OS2Version: 0
+OS2_WeightWidthSlopeOnly: 1
+OS2_UseTypoMetrics: 1
+CreationTime: 1467219042
+ModificationTime: 1697677602
+PfmFamily: 17
+TTFWeight: 700
+TTFWidth: 5
+LineGap: 0
+VLineGap: 0
+Panose: 2 11 8 4 2 1 1 2 1 2
+OS2TypoAscent: 783
+OS2TypoAOffset: 0
+OS2TypoDescent: -217
+OS2TypoDOffset: 0
+OS2TypoLinegap: 213
+OS2WinAscent: 968
+OS2WinAOffset: 0
+OS2WinDescent: 245
+OS2WinDOffset: 0
+HheadAscent: 968
+HheadAOffset: 0
+HheadDescent: -245
+HheadDOffset: 0
+OS2SubXSize: 650
+OS2SubYSize: 600
+OS2SubXOff: 0
+OS2SubYOff: 75
+OS2SupXSize: 650
+OS2SupYSize: 600
+OS2SupXOff: 0
+OS2SupYOff: 350
+OS2StrikeYSize: 50
+OS2StrikeYPos: 312
+OS2CapHeight: 709
+OS2XHeight: 520
+OS2Vendor: '    '
+OS2CodePages: 00000001.00000000
+OS2UnicodeRanges: 00000001.00000000.00000000.00000000
+MarkAttachClasses: 1
+DEI: 91125
+LangName: 1033
+Encoding: UnicodeBmp
+Compacted: 1
+UnicodeInterp: none
+NameList: AGL For New Fonts
+DisplaySize: -48
+AntiAlias: 1
+FitToEm: 0
+WinInfo: 0 38 13
+BeginPrivate: 10
+BlueValues 31 [-14 0 520 533 695 708 709 722]
+OtherBlues 11 [-219 -199]
+FamilyBlues 31 [-14 0 506 519 695 708 709 722]
+FamilyOtherBlues 11 [-217 -212]
+BlueScale 7 0.04762
+BlueFuzz 1 0
+StdHW 5 [117]
+StdVW 5 [127]
+StemSnapH 12 [86 109 117]
+StemSnapV 9 [117 127]
+EndPrivate
+TeXData: 1 0 0 219152 109576 73050 545260 1048576 73050 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
+BeginChars: 65536 2
+
+StartChar: F
+Encoding: 70 70 0
+Width: 588
+GlyphClass: 1
+Flags: MW
+LayerCount: 2
+Fore
+SplineSet
+573 592 m 1
+ 212 592 l 1
+ 212 402 l 1
+ 534 402 l 1
+ 534 285 l 1
+ 212 285 l 1
+ 212 0 l 1
+ 83 0 l 1
+ 83 709 l 1
+ 573 709 l 1
+ 573 592 l 1
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: R
+Encoding: 82 82 1
+Width: 659
+GlyphClass: 1
+Flags: MW
+LayerCount: 2
+Fore
+SplineSet
+628 0 m 1
+ 488 0 l 1
+ 370 268 l 1
+ 213 268 l 1
+ 213 0 l 1
+ 83 0 l 1
+ 83 709 l 1
+ 382 709 l 2
+ 551 709 628 603 628 489 c 0
+ 628 394 576 319 498 290 c 1
+ 628 0 l 1
+499 489 m 0
+ 499 546 455 596 382 596 c 2
+ 212 596 l 1
+ 212 384 l 1
+ 384 384 l 2
+ 457 384 499 422 499 489 c 0
+EndSplineSet
+Validated: 1
+EndChar
+EndChars
+EndSplineFont
