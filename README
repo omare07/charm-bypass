@@ -1,0 +1,64 @@
+== Introduction
+
+CharmBypass, or charm-bypass, is a free software project that lets you
+ride mass transit in Maryland for free. (Disclaimer: doing so is not at
+all legal.) It is what powers the site https://charm-bypass.com/
+
+That website consists of a single file, index.html, that it is our
+goal to build. This document discusses only the technical details
+involved. An introduction and security analysis (what is this, how
+does it work) can be found at,
+
+  1. https://michael.orlitzky.com/articles/charmbypass_pt._1%3A_introduction.xhtml
+  2. https://michael.orlitzky.com/articles/charmbypass_pt._2%3A_analysis.xhtml
+
+
+== Design goals
+
+The main design goal is that the entire application should be
+self-contained: it should be downloadable and usable without network
+access. The "usable" part is lacking somewhat at the moment due to the
+limitations present in mobile operating systems, but containment has
+been achieved.
+
+It is also mobile-only. By which I mean that if you view the site on
+a large (desktop-sized) screen, it will look crazy. That's OK.
+
+
+== Build process
+
+The project uses a standard GNU autotools build system that should be
+familiar to UNIX programmers and system administrators. To build it,
+first install the build requirements listed below. Then run,
+
+  $ autoreconf -fi
+  $ ./configure
+  $ make
+
+The first command (re)generates the autotools build system. The second
+and third invoke it. If you're feeling lucky, you can also run
+
+  $ make check
+
+to run a (very) minimal set of tests on the index.html you just built.
+
+=== Build requirements
+
+  0. GNU autotools
+  1. The "base64" utility from GNU coreutils.
+  2. The "scour" SVG optimizer.
+  3. The "fontforge" program, built with woff2 support.
+  4. The "xsltproc" program from libxslt.
+
+To run the test suite, you'll also need the "tidy-html5" program.
+
+
+== Miscellany
+
+=== SVG Tricks
+
+1. To inline a "transform" from a group (like the bus) that was
+   resized or translated, simply ungroup and regroup the whole thing.
+   This is necessary for groups that are animated using the
+   "transform" property, because otherwise, applying a new transform
+   would clobber the existing one.
