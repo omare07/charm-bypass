@@ -77,29 +77,29 @@ tableau.min.min.svg: tableau.min.svg
 
 # Base64-encode a woff2 (web open font format 2.0) file. We use this
 # to embed fonts directly into the CSS that requires them.
-.woff2.base64:
+.woff2.gbase64:
 	@BASE64@ -w0 $< > $@
 
 # Same with the favicon SVG.
-.svg.base64:
+.svg.gbase64:
 	@BASE64@ -w0 $< > $@
 
 # List all of the dependencies of the final index.html that themselves
 # had to be built. We collect them here because they need to be listed
 # in two places, as dependencies of index.html, and in CLEANFILES.
 index_html_BUILTDEPS = \
-  CharmBypass-Regular.base64 \
-  CharmBypass-Bold.base64    \
-  favicon.base64             \
+  CharmBypass-Regular.gbase64 \
+  CharmBypass-Bold.gbase64    \
+  favicon.gbase64             \
   tableau.min.min.svg
 
 # Build index.html by substituting the contents of a few (single
 # line!) files into @PLACEHOLDERS@ within index.html.in. If you put
 # tildes in tableau.svg this will break, so please don't do that.
 index.html: index.html.in $(index_html_BUILTDEPS)
-	sed -e "s~@CBPREGULAR@~$$(cat CharmBypass-Regular.base64)~" \
-            -e "s~@CBPBOLD@~$$(cat CharmBypass-Bold.base64)~" \
-            -e "s~@FAVICON@~$$(cat favicon.base64)~" \
+	sed -e "s~@CBPREGULAR@~$$(cat CharmBypass-Regular.gbase64)~" \
+            -e "s~@CBPBOLD@~$$(cat CharmBypass-Bold.gbase64)~" \
+            -e "s~@FAVICON@~$$(cat favicon.gbase64)~" \
             -e "s~@SVGDATA@~$$(cat tableau.min.min.svg)~" \
             $< > $@
 
